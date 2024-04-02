@@ -1,16 +1,81 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="stylesheet" href="scss/html_mail_template.css">
 </head>
-<body style="margin: 0px;">
-<table style="background-color: #D0D0D0; width: 100%;">
-	<tr>
-		<td style="padding-left: 15px;"><img src="cid:img/ilias_logo.jpg" alt="ILIAS-Logo" /></td>
-		<td style="padding-left: 15px; padding-right: 15px; font-family: 'Open Sans', 'Verdana', 'Arial', 'Helvetica', sans-serif; font-weight: normal; color: #ffffff; text-align: left; line-height: 19px; font-size: 20px;">Open Source e-Learning</td>
-	</tr>
+
+<body>
+
+<!--full mail-template-->
+<table class="table">
+
+    <!--header-row-->
+    <tr class="header">
+        <td class="spacing">
+            <table class="w-750 center">
+                <tr>
+                    <td class="image-data">
+                        <img class="logo" src="cid:img/HeaderIcon.svg" alt="Logo">
+                    </td>
+                    <td>
+						<span class="installation-text">
+							<strong>open source e-Learning</strong>
+						</span>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <!--content-row-->
+    <tr class="content">
+        <td class="spacing">
+            <table class="w-750 center">
+                <tr>
+                    <td class="font-definition">
+                        <span>Hallo Max Mustermann!</span>
+
+                        <br>
+                        <br>
+
+                        {PLACEHOLDER}
+
+                        <br>
+
+                        <span> URL:
+                                <strong> <a class="text-color" href="https://docu.ilias.de/goto_docu_svy_xyz.html">docu.ilias.de/goto_docu_svy_xyz.html</a> </strong>
+                            </span>
+                        <br>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <!--footer-row-->
+    <tr class="footer">
+        <td class="spacing">
+            <table class="w-750 center">
+                <tr>
+                    <td class="font-definition">
+                            <span>
+                                <strong>docu</strong>
+                                <br>
+                                ILIAS Documentation and Information Center
+                            </span>
+                        <br>
+                        <a class="text-color" href="https://docu.ilias.de/"><span>>https://docu.ilias.de</span></a>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
 </table>
-<div style="margin: 15px; font-family: 'Open Sans', 'Verdana', 'Arial', 'Helvetica', sans-serif; font-weight: normal; text-align: left; line-height: 19px; font-size: 14px;">{PLACEHOLDER}</div>
+
 </body>
+
 </html>

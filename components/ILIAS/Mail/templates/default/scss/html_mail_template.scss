@@ -1,0 +1,136 @@
+:root {
+  /*Entspricht @il-main-color*/
+  --primary-color: #4c6586;
+
+  /*Entspricht @il-main-bg*/
+  --header-bg-color: #ffffff;
+
+  /*Entspricht @il-content-bg*/
+  --content-bg-color: #f0f0f0;
+
+  --footer-bg-color: var(--primary-color);
+
+  /*Text Color nochmal nachschauen*/
+  --text-body-color: #000;
+  --text-footer-color: #fff;
+}
+
+.table {
+  background-color: var(--content-bg-color);
+  width: 100%;
+}
+
+.header {
+  background-color: var(--header-bg-color);
+}
+
+.footer {
+  background-color: var(--footer-bg-color);
+}
+
+.image-data {
+  width: 90px;
+}
+
+td.spacing {
+
+  padding: 20px 0;
+
+}
+.logo {
+  width: 66px;
+  outline-style:none;
+  text-decoration:none;
+  border:none;
+  margin:0;
+}
+
+.installation-text {
+  border-collapse:collapse;
+  color: var(--primary-color);
+  font-family:'Open Sans', Arial, Helvetica, sans-serif;
+  font-size:16px;
+  line-height:22px;
+}
+
+.content .spacing {
+  padding: 80px 0;
+}
+
+.content td td {
+  background-color: var(--header-bg-color);
+}
+
+.text-color {
+  color: var(--primary-color);
+}
+
+.footer .font-definition {
+  color: var(--content-bg-color)
+}
+
+.font-definition {
+  font-family:'Open Sans', Arial, Helvetica, sans-serif;
+  font-size:16px;
+  line-height:22px;
+  padding:30px;
+}
+
+body {
+  height: 100% !important;
+  margin: 0;
+  padding: 0;
+  width: 100% !important;
+  mso-margin-top-alt: 0px;
+  mso-margin-bottom-alt: 0px;
+  mso-padding-alt: 0px 0px 0px 0px;
+
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.w-750 {
+  width: 750px;
+}
+
+.text-color {
+  color: var(--primary-color);
+}
+
+
+table {
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt;
+}
+
+table, table th, table td {
+  border-collapse: collapse;
+}
+
+a, img, a img {
+  border: 0;
+  outline: none;
+  text-decoration: none;
+}
+
+img {
+  -ms-interpolation-mode: bicubic;
+}
+
+
+body, table, td, th, p, a, li {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+@media only screen and (max-width: 760px) {
+  .w-750 {
+    width: 100%;
+  }
+}
