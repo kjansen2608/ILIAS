@@ -1,27 +1,15 @@
-:root {
-  /*Entspricht @il-main-color*/
-  --primary-color: #4c6586;
-  /*Entspricht @il-main-bg*/
-  --header-bg-color: #ffffff;
-  /*Entspricht @il-content-bg*/
-  --content-bg-color: #f0f0f0;
-  --footer-bg-color: var(--primary-color);
-  /*Text Color nochmal nachschauen*/
-  --text-body-color: #000;
-  --text-footer-color: #fff;
-}
-
 .table {
-  background-color: var(--content-bg-color);
+  background-color: #f0f0f0;
   width: 100%;
 }
 
 .header {
-  background-color: var(--header-bg-color);
+  background-color: white;
+  border-bottom: 2px solid #f0f0f0;
 }
 
 .footer {
-  background-color: var(--footer-bg-color);
+  background-color: white;
 }
 
 .image-data {
@@ -42,7 +30,7 @@ td.spacing {
 
 .installation-text {
   border-collapse: collapse;
-  color: var(--primary-color);
+  color: #4c6586;
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 22px;
@@ -53,15 +41,15 @@ td.spacing {
 }
 
 .content td td {
-  background-color: var(--header-bg-color);
+  background-color: white;
 }
 
 .text-color {
-  color: var(--primary-color);
+  color: #4c6586;
 }
 
 .footer .font-definition {
-  color: var(--content-bg-color);
+  color: #161616;
 }
 
 .font-definition {
@@ -93,7 +81,7 @@ body {
 }
 
 .text-color {
-  color: var(--primary-color);
+  color: #4c6586;
 }
 
 table {

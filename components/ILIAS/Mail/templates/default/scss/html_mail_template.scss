@@ -1,31 +1,28 @@
-:root {
-  /*Entspricht @il-main-color*/
-  --primary-color: #4c6586;
 
-  /*Entspricht @il-main-bg*/
-  --header-bg-color: #ffffff;
+  $il-main-color: #4c6586 !default;
 
-  /*Entspricht @il-content-bg*/
-  --content-bg-color: #f0f0f0;
+  $il-main-bg: white !default;
+  $il-main-darker-bg: #f0f0f0 !default;
 
-  --footer-bg-color: var(--primary-color);
 
-  /*Text Color nochmal nachschauen*/
-  --text-body-color: #000;
-  --text-footer-color: #fff;
-}
+  $il-footer-bg-color: $il-main-bg;
+
+  $il-text-color: #161616 !default;
+  $il-footer-color: $il-text-color;
+
 
 .table {
-  background-color: var(--content-bg-color);
+  background-color: $il-main-darker-bg;
   width: 100%;
 }
 
 .header {
-  background-color: var(--header-bg-color);
+  background-color: $il-footer-bg-color;
+  border-bottom: 2px solid $il-main-darker-bg;
 }
 
 .footer {
-  background-color: var(--footer-bg-color);
+  background-color: $il-footer-bg-color;
 }
 
 .image-data {
@@ -47,7 +44,7 @@ td.spacing {
 
 .installation-text {
   border-collapse:collapse;
-  color: var(--primary-color);
+  color: $il-main-color;
   font-family:'Open Sans', Arial, Helvetica, sans-serif;
   font-size:16px;
   line-height:22px;
@@ -58,15 +55,15 @@ td.spacing {
 }
 
 .content td td {
-  background-color: var(--header-bg-color);
+  background-color: $il-footer-bg-color;
 }
 
 .text-color {
-  color: var(--primary-color);
+  color: $il-main-color;
 }
 
 .footer .font-definition {
-  color: var(--content-bg-color)
+  color:   $il-text-color;
 }
 
 .font-definition {
@@ -99,7 +96,7 @@ body {
 }
 
 .text-color {
-  color: var(--primary-color);
+  color: $il-main-color;
 }
 
 
