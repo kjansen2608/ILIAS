@@ -1,5 +1,4 @@
 <?php
-
 /**
  * This file is part of ILIAS, a powerful learning management system
  * published by ILIAS open source e-Learning e.V.
@@ -92,8 +91,6 @@ class ilTrashTableGUI extends ilTable2GUI
     public function initFilter(): void
     {
         $this->setDefaultFilterVisiblity(true);
-
-
         $type = $this->addFilterItemByMetaType(
             'type',
             ilTable2GUI::FILTER_SELECT,
@@ -101,7 +98,9 @@ class ilTrashTableGUI extends ilTable2GUI
             $this->lng->txt('type')
         );
         $type->setOptions($this->prepareTypeFilterTypes());
-        $this->current_filter['type'] = $type->getValue();
+        if ($type->getValue() != '') {
+            $this->current_filter['type'] = $type->getValue();
+        }
 
         $title = $this->addFilterItemByMetaType(
             'title',
@@ -109,8 +108,9 @@ class ilTrashTableGUI extends ilTable2GUI
             false,
             $this->lng->txt('title')
         );
-        $this->current_filter['title'] = $title->getValue();
-
+        if ($title->getValue() != '') {
+            $this->current_filter['title'] = $title->getValue();
+        }
         $deleted_by = $this->addFilterItemByMetaType(
             'deleted_by',
             ilTable2GUI::FILTER_TEXT,
@@ -224,7 +224,12 @@ class ilTrashTableGUI extends ilTable2GUI
             if (!$this->obj_definition->isRBACObject($type)) {
                 continue;
             }
-            $options[$type] = $this->lng->txt('objs_' . $type);
+            if ($this->obj_definition->isPlugin($type)) {
+                $this->lng->loadLanguageModule('rep_robj_' . $type);
+                $options[$type] = $this->lng->txt('rep_robj_' . $type . '_objs_' . $type);
+            } else {
+                $options[$type] = $this->lng->txt('objs_' . $type);
+            }
         }
         asort($options, SORT_LOCALE_STRING);
         array_unshift($options, $this->lng->txt('select_one'));
